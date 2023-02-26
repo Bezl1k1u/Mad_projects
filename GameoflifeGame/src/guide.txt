@@ -1,0 +1,54 @@
+Field 80 x 25
+ASCII
+Interactive
+speed adj
+opposites are neighbours
+
+
+
+RULES
+-----
+Any dead cell(0) with
+    exactly three live neighbours(master_neighbour_count) becomes a live cell, as if by reproduction.
+        return 1
+
+Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+Any live cell with two or three live neighbours lives on to the next generation.
+Any live cell with more than three live neighbours dies, as if by overpopulation.
+
+
+-----
+
+1 0 1 0
+0 0 1 1
+0 1 0 0
+1 0 0 1
+
+1 0 1 0
+1 0 1 1
+0 1 0 0
+1 0 1 1
+
+
+
+== Quest received. Develop an src/game_of_life.c program in C – a visualization of The Game of Life.
+ To display the graphics, only use ASCII characters (with output to the terminal).
+ You need to implement interactive version of the Game of life.
+ Also create the option for adjusting the speed of the "game". ==
+
+Graphics
+
+Treat the playing field - a rectangle of 80 by 25 cells – as a matrix of the state of the "game".
+It is assumed that the field is "closed to itself", for example, in the lower right square,
+ the neighbor on the right is the lower left square, and the neighbor on the bottom is the upper right.
+
+Provide for original initialization of the "game" state via stdin. Prepare at least 5 files with
+ initial states for quick launch and initialization through input redirection.
+
+ To do:
+
+    1 create array
+    2 display it
+
+
+
